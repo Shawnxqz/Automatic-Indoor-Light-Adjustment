@@ -1,7 +1,6 @@
 # Automatic indoor light adjustment
 Luna Kim, Aoran Fu, Xuanqi Zheng, Yide Liu
 
-
 ## Introduction
 ### Abstract
 Living and studying as a CMU student is not easy. There are some students studying in some areas of CMU campus late at night, and the light from the CMU building is never turned off. For the student’s productivity and visual comfort, it is important to provide proper light intensity in the study area. However, most of the lights in the building are too bright or too dimmed and some students feel uncomfortable. In this project, we propose the lighting intensity control system for human visual comfort and productivity improvement based on the occupant’s position. The light intensity sensor was chosen for the key sensor. The smart lighting feature was used for the testing, and 300 lux was chosen for the lighting control threshold. The algorithm was designed based on the distance of the sensor from the lighting source. The result shows that the lighting intensity is successfully adjusted based on the distance. However, it cannot reach the human visual comfort threshold because of the technical issue. 
@@ -257,6 +256,10 @@ and the result of experiment is acceptable. The light does increase its light
 intensity automatically under dark environment and will decrease its light
 intensity under bright experiment.
 
+### Demo Video
+
+
+https://user-images.githubusercontent.com/89351724/206880433-324394b1-912e-4b32-96e6-a1842dab914a.mp4
 
 
 
