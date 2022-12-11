@@ -27,8 +27,10 @@ Part 1.
 > - Assemble the Raspberry pi pico and the light intensity sensor for measuring the light intensity around the sensor and the target light feature.
 > - Check that the light intensity could be changed based on the surrounding lighting using a small diode.
 
-![5a326d726529b1df2dbc83ff63d7998](https://user-images.githubusercontent.com/89351724/205567257-1b542461-da29-4c81-9425-f2beaa0de7b6.png)
-<figcaption align = "center"><b>Figure 1 Assembled hardware system</b></figcaption>
+<div align=center>
+<img width="500" alt="5a326d726529b1df2dbc83ff63d7998" src="https://user-images.githubusercontent.com/89351724/205567257-1b542461-da29-4c81-9425-f2beaa0de7b6.png"><br />
+<b>Figure 1 Assembled hardware system</b>
+</div>
 
 Part 2.
 > - Connecting the assembled hardware with the bulb and setting up the threshold for human visual comfort for reading and writing.
@@ -47,9 +49,10 @@ Part 2.
 
 ### Problems Encountered
 
-In this project, we encountered a lot of questions not only in theoretical
-but also in practice.
-<br />
+In this project, we encountered a lot of questions which are not only theoretical
+but also pratical.
+
+
 __Theoretical__
 1. At first, the physical stimulus of our project is luminous intensity.
 Therefore, the input signal is the luminous intensity. And then
@@ -61,7 +64,10 @@ photodiode.
 signal. We also do not know how the voltage signal transfer to the
 intensity value shown in our screen.
 
-![as](https://user-images.githubusercontent.com/89351724/205569894-2104cc8a-a4bf-4e8a-9c2c-df5ad308b49b.png)
+<div align=center>
+<img width="500" alt="205569894-2104cc8a-a4bf-4e8a-9c2c-df5ad308b49b" src="https://user-images.githubusercontent.com/113749822/206890007-8d99f4cc-c1c7-4ed2-b5cb-c7dcc6f6294f.png"><br />
+<b>Photocurrent vs. illuminance</b>
+</div>
 
 __Practical__
 1. We find a “huesdk” code file in Pico, which can send the instruction to
@@ -96,16 +102,15 @@ red, green, and blue. The wavelength interval of visible light is shown
 below (Figure 2).
 
 <div align=center>
-<img width="395" alt="微信图片_20221205012608" src="https://user-images.githubusercontent.com/89351724/205564044-ad599910-3788-42b7-8712-60fd0f40494e.png"><br />
+<img width="500" alt="waveform" src="https://user-images.githubusercontent.com/113749822/206889399-210704ae-51ae-4276-94a1-d83b048e214a.png"><br />
 <b>Figure 1 Waveform of electromagnetic radiation</b>
 </div>
 <br />
+
 <div align=center>
-<img width="312" alt="6ecd6f7f51969312602b044ba512b75" src="https://user-images.githubusercontent.com/89351724/205564225-80d1e490-a685-4e94-bea1-71a79510de1f.png"><br />
+<img width="500" alt="wavelength" src="https://user-images.githubusercontent.com/113749822/206889408-e4c66617-40d1-49e5-9fc7-450ab811b339.png"><br />
 <b>Figure 2 Wavelength interval of visible light</b>
 </div>
-
-
 
 From the specification of our light intensity sensor, we learn that the
 upper limit of wave length that the sensor can detect is 560 nm, which
@@ -188,9 +193,14 @@ sensor is possible to detect min. 0.11 lx, max. 100000 lx.
 
 #### Sensor characteristics 
 
-![034898b9cdd67548731aca6bb2d5a85](https://user-images.githubusercontent.com/89351724/205571474-b5513c3e-6d9d-46f0-b20d-ba5ee11abcf5.png)
+<div align=center>
+<img width="350" alt="sensor" src="https://user-images.githubusercontent.com/113749822/206890183-4189a7d0-3514-44ca-8eb0-00b8e7c80932.png"><br />
+<b>BH1750 digital Ambient Light Sensor</b>
+</div>
+<br />
 
-BH1750 digital Ambient Light Sensor
+
+
 > - 2.4 ～ 3.6 v Vcc voltage(typically 3.3v)
 > - Operating temperature -40～85 ℃
 > - Peak Wave Length 560 nm 
@@ -267,7 +277,9 @@ intensity under bright experiment.
 https://user-images.githubusercontent.com/89351724/206880433-324394b1-912e-4b32-96e6-a1842dab914a.mp4
 
 ## Evaluation of light system 
-<img width="1100" alt="923372e8a6e9532922094e319679cef" src="https://user-images.githubusercontent.com/120152014/206883469-5eb7d769-3373-4575-a3d6-c70cb85308d6.png">
+<div align=center>
+<img width="800" alt="923372e8a6e9532922094e319679cef" src="https://user-images.githubusercontent.com/120152014/206883469-5eb7d769-3373-4575-a3d6-c70cb85308d6.png">
+</div>
 
 In this project, the light does can change its light automatically in proper distance. However, it takes 10 seconds to adjust its intensity from the minimum intensity (0) to the maximum intensity (254). During this period, it doesn't reach the threshold (human eye comfort range). We define the system score 0% when it takes 10 seconds to reach the threshold. In our system, it always take 5 seconds to reach the equilibrium, so it score 50%. There are two limitations here. The first solution is improving the efficiency of our algorithm. At first, when the light intensity detected by the sensor is higher(lower) than the threshold range, our light will increase(decrease) its intensity a certain number. However, now we will compare the detected data to the threshold. If the difference is too big (50 or 100), we let the light decrease (increase) more. When the difference is small, it will decrease (increase) less. Now, we only need three seconds to reach threshold, which means it scores 70% The second solution is increasing the uploading and downloading speed of Adafruit. The mechanism is when our computer receive one data, it will send one instructions to light and adjust its intensity. Now our computer can receive one data per second, so we need ten seconds to adjust intensity. If the speed can increase  10 data/ seconds, it need one second to adjust. So we need buy the vip of Adafruit.
 
