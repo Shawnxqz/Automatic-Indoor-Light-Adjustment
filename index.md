@@ -9,8 +9,8 @@ Living and studying as a CMU student is not easy. There are some students studyi
 Goals
 In this project, the light intensity of the smart lighting feature was controlled based on the occupant’s distance from the light intensity. The project’s goals will be as following bullets
 
-Controlling the light intensity based on the sensor position (occupant’s position)
-Developing the decision-making process that automatically adjusts the light intensity to meet the standard for reading and writing
+1. Controlling the light intensity based on the sensor position (occupant’s position)
+2. Developing the decision-making process that automatically adjusts the light intensity to meet the standard for reading and writing
 
 
 
