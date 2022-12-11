@@ -49,7 +49,8 @@ Part 2.
 
 In this project, we encountered a lot of questions not only in theoretical
 but also in practice.
-Theoretical
+<br />
+__Theoretical__
 1. At first, the physical stimulus of our project is luminous intensity.
 Therefore, the input signal is the luminous intensity. And then
 photodiode transfer it to photocurrent. In this process, we can not
@@ -62,7 +63,7 @@ intensity value shown in our screen.
 
 ![as](https://user-images.githubusercontent.com/89351724/205569894-2104cc8a-a4bf-4e8a-9c2c-df5ad308b49b.png)
 
-Practical 
+__Practical__
 1. We find a “huesdk” code file in Pico, which can send the instruction to
 hue bridge directly in Pico. Due to its large size, we cannot download
 it in Pico. So could we have method to enlarge the storage space of
@@ -94,12 +95,15 @@ our project is LED white light, which contains the primary colors -
 red, green, and blue. The wavelength interval of visible light is shown
 below (Figure 2).
 
-<img width="395" alt="微信图片_20221205012608" src="https://user-images.githubusercontent.com/89351724/205564044-ad599910-3788-42b7-8712-60fd0f40494e.png">
-<figcaption align = "center"><b>Figure 1 Waveform of light with different color</b></figcaption>
-
-
-<img width="312" alt="6ecd6f7f51969312602b044ba512b75" src="https://user-images.githubusercontent.com/89351724/205564225-80d1e490-a685-4e94-bea1-71a79510de1f.png">
-<figcaption align = "center"><b>Figure 2 Wavelength interval of visible light</b></figcaption>
+<div align=center>
+<img width="395" alt="微信图片_20221205012608" src="https://user-images.githubusercontent.com/89351724/205564044-ad599910-3788-42b7-8712-60fd0f40494e.png"><br />
+<b>Figure 1 Waveform of electromagnetic radiation</b>
+</div>
+<br />
+<div align=center>
+<img width="312" alt="6ecd6f7f51969312602b044ba512b75" src="https://user-images.githubusercontent.com/89351724/205564225-80d1e490-a685-4e94-bea1-71a79510de1f.png"><br />
+<b>Figure 2 Wavelength interval of visible light</b>
+</div>
 
 
 
@@ -275,6 +279,7 @@ However, there are several limitations in this project. First, we had a technica
 For the future goal, we can optimize the control algorithm to sensitively react to the surrounding light intensity for better human visual comfort for working. In this optimization process, we can use not only the light intensity, but also the color temperature as an input variable for better human visual comfort. Also, we need to code the algorithm that could control multiple light bulbs individually. To achieve this goal, the possible solution is to use separate light intensity sensor per each light bulb, or we need a sensor that could visually detect the distance between the light bulb and occupant (e.g. camera) and control the light based on the measured distance and measured light intensity. Elaborating this process, we need further research on this methodology.
 
 ## Referrence
-Characteristics and use of photo IC diodes:https://www.hamamatsu.com/content/dam/hamamatsu-photonics/sites/documents/99_SALES_LIBRARY/ssd/photo_ic_diode_kpic9007e.pdf
-
+Measuring Units Light Level - Illuminance: https://www.engineeringtoolbox.com/light-level-rooms-d_708.html<br />
+Recommended Lighting Levels in Buildings: https://www.archtoolbox.com/recommended-lighting-levels/<br />
+Characteristics and use of photo IC diodes: https://www.hamamatsu.com/content/dam/hamamatsu-photonics/sites/documents/99_SALES_LIBRARY/ssd/photo_ic_diode_kpic9007e.pdf<br />
 Human eye sensitivity and photometric quantities: https://sites.ecse.rpi.edu/~schubert/Light-Emitting-Diodes-dot-org/Sample-Chapter.pdf
