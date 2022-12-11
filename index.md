@@ -125,21 +125,20 @@ is the unit of illuminance (luminous flux per unit area). It is equal to
 one lumen per square meter.
 Illuminance can be expressed as：
 
-$$ E = {Φ \over A} $$
-
-Where: 
-E: light intensity - illuminance (lx, lm/m2)
-Φ: luminous flux - the quantity of light emitted by a light source (lm)
-A: area (m2)
-
+$$I=\frac{\phi}{S}$$
+  
+E: light intensity - illuminance (lx, lm/m2)  
+Φ: luminous flux - the quantity of light emitted by a light source (lm)  
+A: area (\\m^2\\)  
+  
 The intensity of light measured by the light sensor can be defined by
 the equation below:
 
-$$ I = {A^2 \over d^2} $$
-
-Where:
+$$I=\frac{A^2}{d^2}$$
+  
 A: amplitude
-d: distance between sensor and the light source
+d: distance between sensor and light source
+  
 From the equation, we can see that the intensity of light will increase
 if we increase A or decrease d.
 
@@ -168,8 +167,7 @@ light source through programming.
 We will change the sensor to different position in order to simulate the
 real condition that people sit at different place. Changing position will
 also change the distance between the sensor and the light source. We
-can use a tape measure to measure the distance by using the unit of m
-or mm. Then, we can find the relation between distance and the
+can use a tape measure to measure the distance. Then, we can find the relation between distance and the
 brightness of light source.
 
 ### Sensor(s) Used
