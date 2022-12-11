@@ -124,8 +124,9 @@ intensity measured by sensor within the specific range at different position. Th
 is the unit of illuminance (luminous flux per unit area). It is equal to
 one lumen per square meter.
 Illuminance can be expressed as：
-
-'$$ I=\cfrac{\Phi}{S} $$'
+$$
+I=\cfrac{\Phi}{S}
+$$
   
 E: light intensity - illuminance (lx, lm/m<sup>2</sup>)  
 Φ: luminous flux - the quantity of light emitted by a light source (lm)  
@@ -133,8 +134,9 @@ A: area (m<sup>2</sup>)
   
 The intensity of light measured by the light sensor can be defined by
 the equation below:
-
-'$$ I=\cfrac{A^2}{d^2} $$'
+$$
+I=\cfrac{A^2}{d^2}
+$$
   
 A: amplitude  
 d: distance between sensor and light source  
