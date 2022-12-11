@@ -29,7 +29,7 @@ Part 1.
 
 <div align=center>
 <img width="500" alt="5a326d726529b1df2dbc83ff63d7998" src="https://user-images.githubusercontent.com/89351724/205567257-1b542461-da29-4c81-9425-f2beaa0de7b6.png"><br />
-<b>Figure 1 Assembled hardware system</b>
+<b>Figure 1 &ensp; Assembled hardware system</b>
 </div>
 
 Part 2.
@@ -66,7 +66,7 @@ intensity value shown in our screen.
 
 <div align=center>
 <img width="500" alt="205569894-2104cc8a-a4bf-4e8a-9c2c-df5ad308b49b" src="https://user-images.githubusercontent.com/113749822/206890007-8d99f4cc-c1c7-4ed2-b5cb-c7dcc6f6294f.png"><br />
-<b>Photocurrent vs. illuminance</b>
+<b>Figure 2 &ensp; Photocurrent vs. illuminance</b>
 </div>
 
 __Practical__
@@ -96,20 +96,20 @@ The physical stimulus of our project is artificial light source. Since
 light is a type of electromagnetic radiation, it has the features of
 electromagnetic waveform which is a kind of periodic function. 
 Light with different color has different wave length, which determines
-the period of light waveform (Figure 1). The artificial light source of
+the period of light waveform (Figure 3). The artificial light source of
 our project is LED white light, which contains the primary colors -
 red, green, and blue. The wavelength interval of visible light is shown
-below (Figure 2).
+below (Figure 4).
 
 <div align=center>
 <img width="500" alt="waveform" src="https://user-images.githubusercontent.com/113749822/206889399-210704ae-51ae-4276-94a1-d83b048e214a.png"><br />
-<b>Figure 1 Waveform of electromagnetic radiation</b>
+<b>Figure 3 &ensp; Waveform of electromagnetic radiation</b>
 </div>
 <br />
 
 <div align=center>
 <img width="500" alt="wavelength" src="https://user-images.githubusercontent.com/113749822/206889408-e4c66617-40d1-49e5-9fc7-450ab811b339.png"><br />
-<b>Figure 2 Wavelength interval of visible light</b>
+<b>Figure 4 &ensp; Wavelength interval of visible light</b>
 </div>
 
 From the specification of our light intensity sensor, we learn that the
@@ -134,19 +134,19 @@ intensity measured by sensor within the specific range at different position. Th
 is the unit of illuminance (luminous flux per unit area). It is equal to
 one lumen per square meter.
 Illuminance can be expressed as：
-$$
-I=\cfrac{\Phi}{S}
-$$
+<div align=center>
+<img width="72" alt="intensity1" src="https://user-images.githubusercontent.com/113749822/206890957-fb5b9c71-9aeb-4997-ac12-84e6b3dede68.png">
+</div>
   
-E: light intensity - illuminance (lx, lm/m<sup>2</sup>)  
-Φ: luminous flux - the quantity of light emitted by a light source (lm)  
-A: area (m<sup>2</sup>)  
+E: light intensity - illuminance  
+Φ: luminous flux - the quantity of light emitted by a light source  
+A: area
   
 The intensity of light measured by the light sensor can be defined by
 the equation below:
-$$
-I=\cfrac{A^2}{d^2}
-$$
+<div align=center>
+<img width="85" alt="intensity2" src="https://user-images.githubusercontent.com/113749822/206890971-534ba8ab-966e-4b22-91b6-88e2a14b331e.png">
+</div>
   
 A: amplitude  
 d: distance between sensor and light source  
@@ -195,7 +195,7 @@ sensor is possible to detect min. 0.11 lx, max. 100000 lx.
 
 <div align=center>
 <img width="350" alt="sensor" src="https://user-images.githubusercontent.com/113749822/206890183-4189a7d0-3514-44ca-8eb0-00b8e7c80932.png"><br />
-<b>BH1750 digital Ambient Light Sensor</b>
+<b>Figure 5 &ensp; BH1750 digital Ambient Light Sensor</b>
 </div>
 <br />
 
@@ -281,7 +281,7 @@ https://user-images.githubusercontent.com/89351724/206880433-324394b1-912e-4b32-
 <img width="800" alt="923372e8a6e9532922094e319679cef" src="https://user-images.githubusercontent.com/120152014/206883469-5eb7d769-3373-4575-a3d6-c70cb85308d6.png">
 </div>
 
-In this project, the light does can change its light automatically in proper distance. However, it takes 10 seconds to adjust its intensity from the minimum intensity (0) to the maximum intensity (254). During this period, it doesn't reach the threshold (human eye comfort range). We define the system score 0% when it takes 10 seconds to reach the threshold. In our system, it always take 5 seconds to reach the equilibrium, so it score 50%. There are two limitations here. The first solution is improving the efficiency of our algorithm. At first, when the light intensity detected by the sensor is higher(lower) than the threshold range, our light will increase(decrease) its intensity a certain number. However, now we will compare the detected data to the threshold. If the difference is too big (50 or 100), we let the light decrease (increase) more. When the difference is small, it will decrease (increase) less. Now, we only need three seconds to reach threshold, which means it scores 70% The second solution is increasing the uploading and downloading speed of Adafruit. The mechanism is when our computer receive one data, it will send one instructions to light and adjust its intensity. Now our computer can receive one data per second, so we need ten seconds to adjust intensity. If the speed can increase  10 data/ seconds, it need one second to adjust. So we need buy the vip of Adafruit.
+In this project, the light does can change its light automatically in proper distance. However, it takes 10 seconds to adjust its intensity from the minimum intensity (0) to the maximum intensity (254). During this period, it doesn't reach the threshold (human eye comfort range). We define the system score 0% when it takes 10 seconds to reach the threshold. In our system, it always take 5 seconds to reach the equilibrium, so it score 50%. There are two limitations here. The first solution is improving the efficiency of our algorithm. At first, when the light intensity detected by the sensor is higher (lower) than the threshold range, our light will increase (decrease) its intensity a certain number. However, now we will compare the detected data to the threshold. If the difference is too big (50 or 100), we let the light decrease (increase) more. When the difference is small, it will decrease (increase) less. Now, we only need three seconds to reach threshold, which means its score is 70%. The second solution is increasing the uploading and downloading speed of Adafruit. The mechanism is when our computer receive one data, it will send one instructions to light and adjust its intensity. Now our computer can receive one data per second, so we need ten seconds to adjust intensity. If the speed can increase 10 data/second, it need one second to adjust. So, we need to buy the VIP of Adafruit.
 
 ## Discussion
 
