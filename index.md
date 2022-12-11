@@ -1,5 +1,6 @@
 # Automatic indoor light adjustment
-Luna Kim, Aoran Fu, Xuanqi Zheng, Yide Liu
+__Course :__ 12-778 Sensors, Circuits, and Data Infrastructure and Management for Infrastructure (Fall 2022)<br />
+__Team Members :__ Luna Kim, Aoran Fu, Xuanqi Zheng, Yide Liu
 
 ## Introduction
 ### Abstract
