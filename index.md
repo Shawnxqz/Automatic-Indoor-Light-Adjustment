@@ -127,17 +127,17 @@ Illuminance can be expressed as：
 
 $$I=\frac{\phi}{S}$$
   
-E: light intensity - illuminance (lx, lm/m2)  
-Φ: luminous flux - the quantity of light emitted by a light source (lm)  
-A: area (\\m^2\\)  
+E: light intensity - illuminance (lx, lm/m<sup>2</sup>)  
+$\phi$: luminous flux - the quantity of light emitted by a light source (lm)  
+A: area (m<sup>2</sup>)  
   
 The intensity of light measured by the light sensor can be defined by
 the equation below:
 
 $$I=\frac{A^2}{d^2}$$
   
-A: amplitude
-d: distance between sensor and light source
+A: amplitude  
+d: distance between sensor and light source  
   
 From the equation, we can see that the intensity of light will increase
 if we increase A or decrease d.
