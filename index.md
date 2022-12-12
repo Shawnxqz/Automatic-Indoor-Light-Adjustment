@@ -306,7 +306,7 @@ However, there are several limitations in this project. First, we had a technica
 For the future goal, we can optimize the control algorithm to sensitively react to the surrounding light intensity for better human visual comfort for working. In this optimization process, we can use not only the light intensity, but also the color temperature as an input variable for better human visual comfort. Also, we need to code the algorithm that could control multiple light bulbs individually. To achieve this goal, the possible solution is to use separate light intensity sensor per each light bulb, or we need a sensor that could visually detect the distance between the light bulb and occupant (e.g. camera) and control the light based on the measured distance and measured light intensity. Elaborating this process, we need further research on this methodology.
 
 # References
-Measuring Units Light Level - Illuminance: https://www.engineeringtoolbox.com/light-level-rooms-d_708.html<br />
-Recommended Lighting Levels in Buildings: https://www.archtoolbox.com/recommended-lighting-levels/<br />
-Characteristics and use of photo IC diodes: https://www.hamamatsu.com/content/dam/hamamatsu-photonics/sites/documents/99_SALES_LIBRARY/ssd/photo_ic_diode_kpic9007e.pdf<br />
-Human eye sensitivity and photometric quantities: https://sites.ecse.rpi.edu/~schubert/Light-Emitting-Diodes-dot-org/Sample-Chapter.pdf
+[1] Measuring Units Light Level - Illuminance: https://www.engineeringtoolbox.com/light-level-rooms-d_708.html<br />
+[2] Recommended Lighting Levels in Buildings: https://www.archtoolbox.com/recommended-lighting-levels/<br />
+[3] Characteristics and use of photo IC diodes: https://www.hamamatsu.com/content/dam/hamamatsu-photonics/sites/documents/99_SALES_LIBRARY/ssd/photo_ic_diode_kpic9007e.pdf<br />
+[4] Human eye sensitivity and photometric quantities: https://sites.ecse.rpi.edu/~schubert/Light-Emitting-Diodes-dot-org/Sample-Chapter.pdf
