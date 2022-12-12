@@ -2,13 +2,13 @@
 __Course :__ 12-778 Sensors, Circuits, and Data Infrastructure and Management for Infrastructure (Fall 2022)<br />
 __Team Members :__ Luna Kim, Aoran Fu, Xuanqi Zheng, Yide Liu
 
-## Introduction
-### Abstract
+# Introduction
+## Abstract
 Living and studying as a CMU student is not easy. There are some students studying in some areas of CMU campus late at night, and the light from the CMU building is never turned off. For the student’s productivity and visual comfort, it is important to provide proper light intensity in the study area. However, most of the lights in the building are too bright or too dimmed and some students feel uncomfortable. In this project, we propose the lighting intensity control system for human visual comfort and productivity improvement based on the occupant’s position. The light intensity sensor was chosen for the key sensor. The smart lighting feature was used for the testing, and 300 lux was chosen for the lighting control threshold. The algorithm was designed based on the distance of the sensor from the lighting source. The result shows that the lighting intensity is successfully adjusted based on the distance. However, it cannot reach the human visual comfort threshold because of the technical issue. 
 
-### Goals
+## Goals
 Goals
-In this project, the light intensity of the smart lighting feature was controlled based on the occupant’s distance from the light intensity. The project’s goals will be as following bullets
+In this project, the light intensity of the smart lighting feature was controlled based on the occupant’s distance from the light intensity. The project’s goals will be as following bullets:
 
 1. Controlling the light intensity based on the sensor position (occupant’s position)
 2. Developing the decision-making process that automatically adjusts the light intensity to meet the standard for reading and writing
@@ -17,7 +17,7 @@ In this project, the light intensity of the smart lighting feature was controlle
 
 
 
-## Overall progress
+# Overall progress
 Assemble the Raspberry pi pico and the light intensity sensor to react the light intensity
 Programming the algorithm that could control the light bulb based on the surrounding light intensity 
 
@@ -36,7 +36,7 @@ Part 2.
 > - Connecting the assembled hardware with the bulb and setting up the threshold for human visual comfort for reading and writing.
 > - Determine the light intensity could meet the set threshold.
 
-### coding progress
+## coding progress
 Part 1.
 > - Set up the hardware and check the LED can be adjusted based on the surrounding light input from the light intensity sensor.
 
@@ -47,13 +47,13 @@ Part 2.
 
 ![f36382bf20ebac22ee5efe95ec4cf05](https://user-images.githubusercontent.com/89351724/205568004-12d7b0fc-9fd0-46e6-bc8f-4f5b8fa1e1a9.png)
 
-### Problems Encountered
+## Problems Encountered
 
 In this project, we encountered a lot of questions which are not only theoretical
 but also pratical.
 
 
-__Theoretical__
+### Theoretical Problems
 1. At first, the physical stimulus of our project is luminous intensity.
 Therefore, the input signal is the luminous intensity. And then
 photodiode transfer it to photocurrent. In this process, we can not
@@ -69,28 +69,28 @@ intensity value shown in our screen.
 <b>Figure 2 &ensp; Photocurrent vs. illuminance</b>
 </div>
 
-__Practical__
+### Practical Problems
 1. We find a “huesdk” code file in Pico, which can send the instruction to
 hue bridge directly in Pico. Due to its large size, we cannot download
 it in Pico. So could we have method to enlarge the storage space of
 Pico?
 
-### Future Plan
+## Future Plan
 To overcome difficulties and make the control algorithm more robust, further experiment below is needed.
 
 1. Lighting control algorithm optimization for more effective and sensitive control.
 2. Add correlated color temperature as an input variable for human visual comfort by providing a better lighting environment for working and studying.
 3. Improve the algorithm to detect the exact distance between each light feature to the sensor for adjusting each lighting feature's light intensity independently. 
 
-## Methodology
-### Phenomena of Interest
+# Methodology
+## Phenomena of Interest
 We want to measure the light intensity in order to control the light
 intensity within a specific range at different position by adjusting the
 brightness of the light source. Therefore, we need to describe the
 characteristics of visible light.
 
 
-__Visible Light__
+### Visible Light
 
 The physical stimulus of our project is artificial light source. Since
 light is a type of electromagnetic radiation, it has the features of
@@ -122,8 +122,8 @@ wavelength of the light will not change because we do not plan to change
 the color of light.
 
 
-### Measurement
-(1)Light intensity:
+## Measurement
+### Light intensity
 
 We plan to use BH1750 light intensity sensor to measure the light
 intensity at the position of our testing object. The goal of our project is
@@ -154,7 +154,7 @@ d: distance between sensor and light source
 From the equation, we can see that the intensity of light will increase
 if we increase A or decrease d.
 
-(2)Human visual comfort:
+### Human visual comfort
 
 control threshold, what is it, etc.
 Light Level or Illuminance is the total luminous flux incident on a
@@ -174,7 +174,7 @@ Therefore, we need to control the light intensity measured by the
 sensor within the range of 300 – 500 lx by adjusting the brightness of
 light source through programming.
 
-(3)Distance:
+### Distance
 
 We will change the sensor to different position in order to simulate the
 real condition that people sit at different place. Changing position will
@@ -182,7 +182,7 @@ also change the distance between the sensor and the light source. We
 can use a tape measure to measure the distance. Then, we can find the relation between distance and the
 brightness of light source.
 
-### Sensor(s) Used
+## Sensor(s) Used
 Illuminance measurement with BH1750 digital Ambient Light Sensor model
 
 The aim of this project is to measure the environment luminous intensity.
@@ -191,7 +191,7 @@ produce photocurrent when this diode exposes to the light. Photodiode
 can produce more photocurrent with the increase of light intensity. This
 sensor is possible to detect min. 0.11 lx, max. 100000 lx.
 
-#### Sensor characteristics 
+### Sensor characteristics 
 
 <div align=center>
 <img width="350" alt="sensor" src="https://user-images.githubusercontent.com/113749822/206890183-4189a7d0-3514-44ca-8eb0-00b8e7c80932.png"><br />
@@ -213,7 +213,7 @@ Hue bridge:
 It is controller to control two LED lights, which can control their light
 remotely.
 
-### Physical Principle
+## Physical Principle
 
 Light intensity:
 
@@ -229,7 +229,7 @@ However, the office desk lighting range is 100-1000 lux and the most
 comfortable range is 500-600 lux.(eye sensitivity)
 
 
-### Signal Conditioning and Processing
+## Signal Conditioning and Processing
 
 We want to control the light to be able to responsible to the lower or
 higher environmental luminous intensity, which can adjust its intensity to
@@ -251,7 +251,7 @@ intensity to each led light.
 
 
 
-## Experiments and Results
+# Experiments and Results
 
 After the BH1750 sensor was installed, we performed simple test by
 using flashing light or blinding it by a coverage. It performs very well and
@@ -271,26 +271,26 @@ and the result of experiment is acceptable. The light does increase its light
 intensity automatically under dark environment and will decrease its light
 intensity under bright experiment.
 
-### Demo Video
+## Demo Video
 
 
 https://user-images.githubusercontent.com/89351724/206880433-324394b1-912e-4b32-96e6-a1842dab914a.mp4
 
-## Evaluation of light system 
+# Evaluation of light system 
 <div align=center>
 <img width="800" alt="923372e8a6e9532922094e319679cef" src="https://user-images.githubusercontent.com/120152014/206883469-5eb7d769-3373-4575-a3d6-c70cb85308d6.png">
 </div>
 
 In this project, the light does can change its light automatically in proper distance. However, it takes 10 seconds to adjust its intensity from the minimum intensity (0) to the maximum intensity (254). During this period, it doesn't reach the threshold (human eye comfort range). We define the system score 0% when it takes 10 seconds to reach the threshold. In our system, it always take 5 seconds to reach the equilibrium, so it score 50%. There are two limitations here. The first solution is improving the efficiency of our algorithm. At first, when the light intensity detected by the sensor is higher (lower) than the threshold range, our light will increase (decrease) its intensity a certain number. However, now we will compare the detected data to the threshold. If the difference is too big (50 or 100), we let the light decrease (increase) more. When the difference is small, it will decrease (increase) less. Now, we only need three seconds to reach threshold, which means its score is 70%. The second solution is increasing the uploading and downloading speed of Adafruit. The mechanism is when our computer receive one data, it will send one instructions to light and adjust its intensity. Now our computer can receive one data per second, so we need ten seconds to adjust intensity. If the speed can increase 10 data/second, it need one second to adjust. So, we need to buy the VIP of Adafruit.
 
-## Discussion
+# Discussion
 
 In this project, we are trying to adjust the brightness of the smart bulb based on the surrounding light intensity. Raspberry pi pico with the light intensity sensor was used for the hardware to achieve this goal. The result shows that we can control the brightness of the smart light feature successfully. 
 However, there are several limitations in this project. First, we had a technical issue. we had to adjust the threshold much lower than our goal because of the range of the available light intensity of the bulbs. In addition, the developed algorithm cannot control the single light bulb's light intensity by its distance from the bulb. We presume that we programmed the algorithm to react to the overall surrounding light intensity, so the sensor only measures average or the total light intensity of two bulbs around the sensor. To overcome these issues, the further experiment is needed.
 
 For the future goal, we can optimize the control algorithm to sensitively react to the surrounding light intensity for better human visual comfort for working. In this optimization process, we can use not only the light intensity, but also the color temperature as an input variable for better human visual comfort. Also, we need to code the algorithm that could control multiple light bulbs individually. To achieve this goal, the possible solution is to use separate light intensity sensor per each light bulb, or we need a sensor that could visually detect the distance between the light bulb and occupant (e.g. camera) and control the light based on the measured distance and measured light intensity. Elaborating this process, we need further research on this methodology.
 
-## Referrence
+# Referrence
 Measuring Units Light Level - Illuminance: https://www.engineeringtoolbox.com/light-level-rooms-d_708.html<br />
 Recommended Lighting Levels in Buildings: https://www.archtoolbox.com/recommended-lighting-levels/<br />
 Characteristics and use of photo IC diodes: https://www.hamamatsu.com/content/dam/hamamatsu-photonics/sites/documents/99_SALES_LIBRARY/ssd/photo_ic_diode_kpic9007e.pdf<br />
