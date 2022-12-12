@@ -2,6 +2,25 @@
 __Course:__ 12-778 Sensors, Circuits and Data Interpretation/Management for Infrastructure Systems (Fall 2022)<br />
 __Team Members:__ Luna Kim, Aoran Fu, Xuanqi Zheng, Yide Liu
 
+# Table of Contents
+* [Introduction](#introduction)
+  * [Abstract](#abstract)
+  * [Goals](#goals)
+* [Overall Progress](#overall-progress)
+  * [Coding Progress](#coding-progress)
+  * [Problems Encountered](#problems-encountered)
+  * [Future Plan](#future-plan)
+* [Methodology](#methodology)
+  * [Phenomena of Interest](#phenomena-of-interest)
+  * [Measurement](#measurement)
+  * [Sensor(s) Used](#sensors-used)
+  * [Signal Conditioning and Processing](#signal-conditioning-and-processing)
+* [Experiments and Results](#experiments-and-results)
+  * [Demo Video](#demo-video)
+* [Evaluation of Light Control System](#evaluation-of-light-control-system)
+* [Discussion](#discussion)
+* [References](#references)
+
 # Introduction
 ## Abstract
 Living and studying as a CMU student is not easy. There are some students studying in some areas of CMU campus late at night, and the light from the CMU building is never turned off. For the student’s productivity and visual comfort, it is important to provide proper light intensity in the study area. However, most of the lights in the building are too bright or too dimmed and some students feel uncomfortable. In this project, we propose the lighting intensity control system for human visual comfort and productivity improvement based on the occupant’s position. The light intensity sensor was chosen for the key sensor. The smart lighting feature was used for the testing, and 300 lux was chosen for the lighting control threshold. The algorithm was designed based on the distance of the sensor from the lighting source. The result shows that the lighting intensity is successfully adjusted based on the distance. However, it cannot reach the human visual comfort threshold because of the technical issue. 
