@@ -17,7 +17,7 @@ In this project, the light intensity of the smart lighting feature was controlle
 
 
 
-# Overall progress
+# Overall Progress
 Assemble the Raspberry pi pico and the light intensity sensor to react the light intensity
 Programming the algorithm that could control the light bulb based on the surrounding light intensity 
 
@@ -36,7 +36,7 @@ Part 2.
 > - Connecting the assembled hardware with the bulb and setting up the threshold for human visual comfort for reading and writing.
 > - Determine the light intensity could meet the set threshold.
 
-## coding progress
+## Coding Progress
 Part 1.
 > - Set up the hardware and check the LED can be adjusted based on the surrounding light input from the light intensity sensor.
 
@@ -92,24 +92,37 @@ characteristics of visible light.
 
 ### Visible Light
 
-The physical stimulus of our project is artificial light source. Since
-light is a type of electromagnetic radiation, it has the features of
-electromagnetic waveform which is a kind of periodic function. 
-Light with different color has different wave length, which determines
-the period of light waveform (Figure 3). The artificial light source of
-our project is LED white light, which contains the primary colors -
-red, green, and blue. The wavelength interval of visible light is shown
-below (Figure 4).
+The physical stimulus of our project is visible light, produced
+by artificial light source. Specifically, it is white light, produced
+by Philips Hue White LED Smart Bulb. The LED smart bulb is shown below.
 
 <div align=center>
-<img width="500" alt="waveform" src="https://user-images.githubusercontent.com/113749822/206889399-210704ae-51ae-4276-94a1-d83b048e214a.png"><br />
-<b>Figure 3 &ensp; Waveform of electromagnetic radiation</b>
+<img width="500" alt="smart_bulb" src="https://user-images.githubusercontent.com/113749822/206958837-559bc583-9df2-46fe-8991-1a3849698dd7.jpg"><br />
+<b>Figure 3 &ensp; Philips Hue White LED Smart Bulb</b>
 </div>
 <br />
 
+Since light is a part in the electromagnetic spectrum, 
+it has the features of electromagnetic radiation. 
+Different type of electromagnetic radiation has different wavelength, which
+determines the period of waveform (Figure 4). 
+The artificial light source of
+our project is LED white light, which contains the primary colors -
+red, green, and blue. 
+
+<div align=center>
+<img width="500" alt="waveform" src="https://user-images.githubusercontent.com/113749822/206889399-210704ae-51ae-4276-94a1-d83b048e214a.png"><br />
+<b>Figure 4 &ensp; Waveform of Electromagnetic Radiation</b>
+</div>
+<br />
+
+Also, light with different color has different wavelength. From red light to violet light, 
+the wavelength decreases gradually. The wavelength interval of visible light is shown
+below (Figure 5).
+
 <div align=center>
 <img width="500" alt="wavelength" src="https://user-images.githubusercontent.com/113749822/206889408-e4c66617-40d1-49e5-9fc7-450ab811b339.png"><br />
-<b>Figure 4 &ensp; Wavelength interval of visible light</b>
+<b>Figure 5 &ensp; Wavelength Interval of Visible Light</b>
 </div>
 
 From the specification of our light intensity sensor, we learn that the
@@ -123,56 +136,70 @@ the color of light.
 
 
 ## Measurement
-### Light intensity
+### Light Intensity
 
 We plan to use BH1750 light intensity sensor to measure the light
 intensity at the position of our testing object. The goal of our project is
 to control the light intensity measured by the sensor within a range
 that makes human’s eyes comfortable for studying, reading, etc. We
 will adjust the brightness of light source by coding to control the light
-intensity measured by sensor within the specific range at different position. The light intensity is recorded using the unit of lx (lux). Lux
-is the unit of illuminance (luminous flux per unit area). It is equal to
-one lumen per square meter.
+intensity measured by sensor within the specific range at different position.
+
+There are several ways to measure light intensity. In our project, we record 
+light intensity using the unit of lx (lux). Lux is the unit of illuminance 
+(luminous flux per unit area). It is equal to one lumen per square meter.
 Illuminance can be expressed as：
 <div align=center>
 <img width="72" alt="intensity1" src="https://user-images.githubusercontent.com/113749822/206890957-fb5b9c71-9aeb-4997-ac12-84e6b3dede68.png">
 </div>
   
-E: light intensity - illuminance  
+I: light intensity - illuminance  
 Φ: luminous flux - the quantity of light emitted by a light source  
-A: area
+S: area
   
-The intensity of light measured by the light sensor can be defined by
-the equation below:
+Since we simulate the scenario that the sensor detects the light intensity at 
+different position, the distance between the sensor and the light source will 
+change, and thus we need to find the relation between light intensity and 
+distance. The relation can be expressed by the equation below:
 <div align=center>
 <img width="85" alt="intensity2" src="https://user-images.githubusercontent.com/113749822/206890971-534ba8ab-966e-4b22-91b6-88e2a14b331e.png">
 </div>
   
-A: amplitude  
+A: amplitude - determines the brightness of light  
 d: distance between sensor and light source  
   
-From the equation, we can see that the intensity of light will increase
-if we increase A or decrease d.
+From the equation, we can see that light intensity is proportional to A 
+squared and inversely proportional to d squared. Therefore, light intensity
+will increase if we increase A or decrease d.
 
-### Human visual comfort
+### Human Visual Comfort
 
-control threshold, what is it, etc.
 Light Level or Illuminance is the total luminous flux incident on a
 surface per unit area. The outdoor light level is approximately 10000
 lx on a clear day. In a building in the area closest to the windows the
 light level may be reduced to approximately 1000 lx. In the middle
-area it may be as low as 25 - 50 lx. Additional lighting is often
+area it may be as low as 25 ~ 50 lx. Additional lighting is often
 necessary to compensate low levels.
-According the information on the internet, the minimum illuminance
+
+According the information online, the minimum illuminance
 is 50 lx for walls and 30 lx for ceilings. Earlier it was common with
-light levels in the range 100 - 300 lx for normal activities. Today the
-light level is more common in the range 500 - 1000 lx - depending on
+light levels in the range 100 ~ 300 lx for normal activities. Today the
+light level is more common in the range 500 ~ 1000 lx - depending on
 activity. For precision and detailed works the light level may even
-approach 1500 - 2000 lx. The optimal illuminance for focused
-activity (e.g., reading, studying or working) would be 300 - 500 lx.
+approach 1500 ~ 2000 lx. 
+
+The optimal illuminance for focused activity 
+(e.g., reading, studying or working) would be 300 ~ 500 lx (Table 1).
 Therefore, we need to control the light intensity measured by the
-sensor within the range of 300 – 500 lx by adjusting the brightness of
-light source through programming.
+sensor within the range of 300 ~ 500 lx by adjusting the brightness of
+light source through programming. According to the equation mentioned before, 
+for example, when the distance increases, we should increase the brightness 
+of the light in order to keep the light intensity unchanged.
+
+<div align=center>
+<b>Table 1 &ensp; Recommended Lighting Levels</b><br />
+<img width="500" alt="lighting-levels" src="https://user-images.githubusercontent.com/113749822/206960735-cf4e78a7-b3a2-4be4-bb1d-3ff43fca32f5.png">
+</div>
 
 ### Distance
 
@@ -191,11 +218,11 @@ produce photocurrent when this diode exposes to the light. Photodiode
 can produce more photocurrent with the increase of light intensity. This
 sensor is possible to detect min. 0.11 lx, max. 100000 lx.
 
-### Sensor characteristics 
+### Sensor Characteristics 
 
 <div align=center>
 <img width="350" alt="sensor" src="https://user-images.githubusercontent.com/113749822/206890183-4189a7d0-3514-44ca-8eb0-00b8e7c80932.png"><br />
-<b>Figure 5 &ensp; BH1750 digital Ambient Light Sensor</b>
+<b>Figure 6 &ensp; BH1750 Digital Ambient Light Sensor</b>
 </div>
 <br />
 
@@ -213,20 +240,6 @@ Hue bridge:
 It is controller to control two LED lights, which can control their light
 remotely.
 
-## Physical Principle
-
-Light intensity:
-
-There are several measures of light known as intensity. In our project, we
-concentrate on luminous intensity (unit lux). In photometry, luminous
-intensity is a measure of wavelength-weighted power emitted by a light
-source in a particular direction, per unit solid angle. It is also a
-standardized model of sensitivity of human eye. In different working
-environment, human perception to acceptable luminous intensity is
-different. For an instance, the range of home lighting is 30 to 300
-lux(human eye comfort range is 100-150 lux based on different people).
-However, the office desk lighting range is 100-1000 lux and the most
-comfortable range is 500-600 lux.(eye sensitivity)
 
 
 ## Signal Conditioning and Processing
@@ -258,9 +271,10 @@ using flashing light or blinding it by a coverage. It performs very well and
 response instantaneously. 
 Then we test whether the hue bridge can control the Led lights normally
 by using official app to change the light intensity. The test is good. Then,
-we find the ip address of the hue bridge(http://10.0.0.78/debug/clip.html)
+we find the ip address of the hue bridge (http://10.0.0.78/debug/clip.html)
 and use this website to visit hue bridge directly to send istructions to
 lights. 
+
 After that, we build connection between Pico with BH1750 sensor and
 Adafruit website. Then we use another laptop to receive this data and
 then send instructions based on this data to change light source intensity.
@@ -276,9 +290,9 @@ intensity under bright experiment.
 
 https://user-images.githubusercontent.com/89351724/206880433-324394b1-912e-4b32-96e6-a1842dab914a.mp4
 
-# Evaluation of light system 
+# Evaluation of Light Control System 
 <div align=center>
-<img width="800" alt="923372e8a6e9532922094e319679cef" src="https://user-images.githubusercontent.com/120152014/206883469-5eb7d769-3373-4575-a3d6-c70cb85308d6.png">
+<img width="700" alt="923372e8a6e9532922094e319679cef" src="https://user-images.githubusercontent.com/120152014/206883469-5eb7d769-3373-4575-a3d6-c70cb85308d6.png">
 </div>
 
 In this project, the light does can change its light automatically in proper distance. However, it takes 10 seconds to adjust its intensity from the minimum intensity (0) to the maximum intensity (254). During this period, it doesn't reach the threshold (human eye comfort range). We define the system score 0% when it takes 10 seconds to reach the threshold. In our system, it always take 5 seconds to reach the equilibrium, so it score 50%. There are two limitations here. The first solution is improving the efficiency of our algorithm. At first, when the light intensity detected by the sensor is higher (lower) than the threshold range, our light will increase (decrease) its intensity a certain number. However, now we will compare the detected data to the threshold. If the difference is too big (50 or 100), we let the light decrease (increase) more. When the difference is small, it will decrease (increase) less. Now, we only need three seconds to reach threshold, which means its score is 70%. The second solution is increasing the uploading and downloading speed of Adafruit. The mechanism is when our computer receive one data, it will send one instructions to light and adjust its intensity. Now our computer can receive one data per second, so we need ten seconds to adjust intensity. If the speed can increase 10 data/second, it need one second to adjust. So, we need to buy the VIP of Adafruit.
@@ -290,7 +304,7 @@ However, there are several limitations in this project. First, we had a technica
 
 For the future goal, we can optimize the control algorithm to sensitively react to the surrounding light intensity for better human visual comfort for working. In this optimization process, we can use not only the light intensity, but also the color temperature as an input variable for better human visual comfort. Also, we need to code the algorithm that could control multiple light bulbs individually. To achieve this goal, the possible solution is to use separate light intensity sensor per each light bulb, or we need a sensor that could visually detect the distance between the light bulb and occupant (e.g. camera) and control the light based on the measured distance and measured light intensity. Elaborating this process, we need further research on this methodology.
 
-# Referrence
+# References
 Measuring Units Light Level - Illuminance: https://www.engineeringtoolbox.com/light-level-rooms-d_708.html<br />
 Recommended Lighting Levels in Buildings: https://www.archtoolbox.com/recommended-lighting-levels/<br />
 Characteristics and use of photo IC diodes: https://www.hamamatsu.com/content/dam/hamamatsu-photonics/sites/documents/99_SALES_LIBRARY/ssd/photo_ic_diode_kpic9007e.pdf<br />
