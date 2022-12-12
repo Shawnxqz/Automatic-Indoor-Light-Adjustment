@@ -68,7 +68,7 @@ Part 2.
 
 ## Problems Encountered
 
-In this project, we encountered a lot of questions which are not only theoretical
+In this project, we encounter a lot of questions which are not only theoretical
 but also pratical.
 
 
@@ -85,17 +85,17 @@ intensity value shown in our screen.
 
 <div align=center>
 <img width="500" alt="205569894-2104cc8a-a4bf-4e8a-9c2c-df5ad308b49b" src="https://user-images.githubusercontent.com/113749822/206890007-8d99f4cc-c1c7-4ed2-b5cb-c7dcc6f6294f.png"><br />
-<b>Figure 2 &ensp; Photocurrent vs. illuminance</b>
+<b>Figure 2 &ensp; Photocurrent vs. Illuminance</b>
 </div>
 
 ### Practical Problems
 1. We find a “huesdk” code file in Pico, which can send the instruction to
 hue bridge directly in Pico. Due to its large size, we cannot download
-it in Pico. So could we have method to enlarge the storage space of
+it into Pico. So, is there a way to enlarge the storage space of
 Pico?
 
 ## Future Plan
-To overcome difficulties and make the control algorithm more robust, further experiment below is needed.
+To overcome difficulties and make the control algorithm more robust, further experiments below are needed.
 
 1. Lighting control algorithm optimization for more effective and sensitive control.
 2. Add correlated color temperature as an input variable for human visual comfort by providing a better lighting environment for working and studying.
