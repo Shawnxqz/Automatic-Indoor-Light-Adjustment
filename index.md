@@ -124,6 +124,7 @@ below (Figure 5).
 <img width="500" alt="wavelength" src="https://user-images.githubusercontent.com/113749822/206889408-e4c66617-40d1-49e5-9fc7-450ab811b339.png"><br />
 <b>Figure 5 &ensp; Wavelength Interval of Visible Light</b>
 </div>
+<br />
 
 From the specification of our light intensity sensor, we learn that the
 upper limit of wave length that the sensor can detect is 560 nm, which
