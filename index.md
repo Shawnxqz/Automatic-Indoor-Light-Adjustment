@@ -307,8 +307,8 @@ intensity under bright experiment.
 
 ## Demo Video
 
+<iframe width="560" height="315" src="https://user-images.githubusercontent.com/89351724/206880433-324394b1-912e-4b32-96e6-a1842dab914a.mp4" frameborder="0" allowfullscreen></iframe>
 
-https://user-images.githubusercontent.com/89351724/206880433-324394b1-912e-4b32-96e6-a1842dab914a.mp4
 
 # Evaluation of Light Control System 
 <div align=center>
