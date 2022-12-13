@@ -15,7 +15,7 @@ __Team Members:__ Luna Kim, Aoran Fu, Xuanqi Zheng, Yide Liu
   * [Measurement](#measurement)
   * [Sensor(s) Used](#sensors-used)
   * [Signal Conditioning and Processing](#signal-conditioning-and-processing)
-  * [Error Analysis]
+  * [Error Analysis](#error-analysis)
 * [Experiments and Results](#experiments-and-results)
   * [Demo Video](#demo-video)
 * [Evaluation of Light Control System](#evaluation-of-light-control-system)
@@ -284,9 +284,10 @@ intensity to each led light.
 ## Error Analysis
 This sensor can reject the light noise in 50/60HZ. The measurement accuracy of this sensor is 1.2times of the measurement and the resolution is 1.0 lx. 
 Therefore, the design state uncertainty mainly consits of resolution part and measurement accuracy. The formlulation shown below:
-![image](https://user-images.githubusercontent.com/120152014/207446610-2a2b9a57-0975-45f2-910a-6876dad8b5af.png)
 
-
+<div align=center>
+<img width="600" alt="image" src="https://user-images.githubusercontent.com/120152014/207446610-2a2b9a57-0975-45f2-910a-6876dad8b5af.png">
+</div>
 
 
 # Experiments and Results
