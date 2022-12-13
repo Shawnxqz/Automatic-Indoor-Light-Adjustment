@@ -15,7 +15,7 @@ __Team Members:__ Luna Kim, Aoran Fu, Xuanqi Zheng, Yide Liu
   * [Measurement](#measurement)
   * [Sensor(s) Used](#sensors-used)
   * [Signal Conditioning and Processing](#signal-conditioning-and-processing)
-  * [Error Analysis](#Error Analysis)
+  * [Error Analysis]
 * [Experiments and Results](#experiments-and-results)
   * [Demo Video](#demo-video)
 * [Evaluation of Light Control System](#evaluation-of-light-control-system)
